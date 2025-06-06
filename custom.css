@@ -1,0 +1,18 @@
+.index-title {
+    text-align:center;
+    font-family:Arial, Helvetica, sans-serif;
+    color:deeppink;
+    text-shadow: 
+    4px 5px 4px goldenrod,
+    1px 2px 1px orangered;
+    text-decoration: overline;
+    text-decoration-style: wavy;
+    text-decoration-color: goldenrod;
+}
+
+.index-banner {
+   display: block;
+   margin: 0 auto;
+
+
+}
