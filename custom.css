@@ -1,18 +1,294 @@
-.index-title {
-    text-align:center;
+/* Full Site */
+body {
     font-family:Arial, Helvetica, sans-serif;
-    color:deeppink;
-    text-shadow: 
-    4px 5px 4px goldenrod,
-    1px 2px 1px orangered;
-    text-decoration: overline;
-    text-decoration-style: wavy;
-    text-decoration-color: goldenrod;
+    background-color: rgb(235, 243, 158);
 }
+
+table {
+    table-layout: fixed;
+    width:100%;
+    border-collapse: collapse;
+}
+
+th {
+    padding-bottom: 15px;
+}
+
+.page-buttons {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-color: #df102c;
+    padding: 0.5em;
+}
+
+.page-buttons a {
+    flex: 0 0 auto;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff; 
+    font-weight: bold;
+}
+
+.page-buttons a:nth-child(1) {
+    text-align: left;
+}
+
+.page-buttons a:nth-child(2) {
+    text-align: center;
+}
+
+.page-buttons a:nth-child(3) {
+    text-align: right;
+}
+
+#emphasis {
+    text-emphasis-color: yellow;
+    text-emphasis-style: "~";
+}
+
+#skip {
+    text-decoration-skip-ink: auto;
+}
+
+#dotted-underline {
+    border-bottom: 4px dotted purple;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(253, 7, 48);
+    text-shadow: 5px 5px 5px yellow;
+}
+
+.margin-bottom {
+    margin-bottom:50px;
+}
+
+/* Index Page */
 
 .index-banner {
-   display: block;
-   margin: 0 auto;
+    position: relative;
+    height: 20vh;
+    overflow: hidden;
+    font-size: 2rem;
+}
 
+.index-banner img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.index-title {
+    position: relative;
+    z-index: 2;
+    text-align: center;   
+    color:white;
+    text-shadow: 10px 10px 3px rgb(250, 1, 51);
+    -webkit-text-stroke: 2px rgb(10, 182, 159);
+    margin: 0;
+    padding-top: 4vh;
+}
+
+.index-welcome {
+    text-align: center;
+    color: chartreuse;
+    text-shadow: 2px 2px 5px crimson;
+    font-size:3.1rem;
+}
+
+.index-tagline {
+    text-align: center;
+    color: springgreen;
+    font-size: 2.3rem;
+    -webkit-text-stroke: 0.5px  rgb(233, 5, 62);
+}
+
+/* Menu Page */
+
+#menu-img-left {
+    float: left;
+    height:auto;
+    max-width: 40%;
+    padding:10px 10px 10px 10px;
+}
+
+#menu-img-right {
+    float: right;
+    height:auto;
+    max-width: 185px;
+    padding:10px 10px 10px 10px;
+}
+
+.margin-spacing {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    overflow: hidden;
+}
+
+.table-wrapper {
+    overflow: hidden;
+}
+
+#price-align td:nth-child(2) {
+    text-align: center;
+}
+
+.menu-cats {
+    font-size: 40px;
+    color:rgb(10, 182, 159);
+    text-shadow: 5px 5px 5px rgb(233, 5, 62);
+}
+
+.menu-th {
+    font-size: 27px;
+    color:rgb(130, 5, 233);
+    text-shadow: 5px 5px 5px rgb(233, 5, 62);
+}
+
+.menu-td {
+    font-size:16px;
+    color:rgb(4, 5, 68);
+}
+
+/* Order Page */
+
+#margin-bottom {
+    display:block;
+    margin-bottom: 50px;
+}
+
+.order-options {
+    text-align:center;
+    font-size: 30px;
+    color:rgb(10, 182, 159);
+    text-shadow: 2px 2px 2px rgb(233, 5, 62);
+    
+}
+
+.order-options ul{
+    font-size:20px;
+    color:rgb(4, 5, 68);  
+    list-style-position: inside;
+    list-style: none;  
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.order-options ul li {
+    margin-bottom: 10px;
+}
+
+.order-form-h2 {
+    color: chartreuse;
+    text-shadow: 2px 2px 5px crimson;
+    font-size:2.5rem;
+    text-align: center;
+}
+
+.divider {
+    height: 1px;
+    background-color:#df102c;
+    margin: 30px auto;
+    width:80%;
+}
+
+.order-input {
+    text-align: center;
+    
+}
+
+.order-input h3 {
+    text-align:center;
+    font-size: 20px;
+    color:rgb(10, 182, 159);
+    text-shadow: 2px 2px 2px rgb(233, 5, 62);
+}
+
+.order-form-input {
+    text-align:left;
+    resize: none;
+}
+
+.order-form-input h3 {    
+    font-size: 30px;
+    color:rgb(10, 182, 159);
+    text-shadow: 2px 2px 2px rgb(233, 5, 62);
+}
+.order-form-input input {
+    width: 30%;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border: 2px solid rgb(233, 5, 62);
+    border-radius: 2px;
 
 }
+
+.order-form-input input:focus {
+    border: 3px solid chartreuse;
+
+}
+
+.radio-group {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.size-options {
+    font-size:16px;
+    color:rgb(4, 5, 68);
+    font-weight:bold;
+}
+
+.submit {
+    background-color: yellow;
+    border: 10px solid rgb(10, 182, 159);
+    color: rgb(233, 5, 62);
+    padding: 5px 5px;
+    display:inline-block;
+    font-weight:bold;    
+}
+
+.submit input {
+    cursor: pointer;
+}
+
+.submit p {
+    margin: 0 0 0 0;
+}
+
+.submit a {
+    color: rgb(233, 5, 62);
+    text-decoration: none;
+}
+
+/* Submit Page */
+
+.thank-you {
+    text-align:center;
+    text-emphasis: filled double-circle rgb(233, 5, 62);
+    padding:200px 0;
+    color:yellow;
+    text-shadow: 5px 5px 5px rgb(10, 182, 159);
+    font-size: 25px;
+    -webkit-text-stroke: 1px  chartreuse;
+}
+
+
+
+
+

@@ -4,26 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="custom.css">    
 </head>
 <body>
     
-    <h1>Place an Order</h1>
+    <div>
+    <h1 class="page-title">Place an Order</h1>
+    </div> 
 
-
+    <div class="order-options">
     <h3>Smoothies</h3>
     <ul>
         <li>Pineapple Passion</li>
         <li>Orange To My Mango</li>
         <li>Jack[fruit] the Dragon[fruit]</li>
     </ul>
+    </div>
 
+    <div class="order-options">
     <h3>Bowls</h3>
     <ul>
         <li>Starry Bite</li>
         <li>Citrus Mistress</li>
         <li>This BOWL is B-A-N-A-N-A-s</li>
     </ul>
+    </div>
 
+    <div class="order-options">
     <h3>Sides</h3>
     <ul>
         <li>Mango</li>
@@ -32,59 +39,64 @@
         <li>Banana</li>
         <li>Avocado</li>
     </ul>
+    </div>
 
-    <h2>Online Order Form</h2>
+    <div class="divider"></div>
+
+    <h2 class="order-form-h2">Online Order Form</h2>
    
-   <h3>Items</h3>
+   <div class="order-form-input">
+    <h3>Items</h3>
     <form>
         <input type="text" name="item" placeholder="Item">
         <input type="text" name="quantity" placeholder="Quantity"> <br>
-        <p>Size (if applicable)</p> 
-        <input type="radio" name="small" placeholder="Small">
-        <label for="sizeS">S</label>
-        <input type="radio" name="medium" placeholder="Medium">
-        <label for="sizeM">M</label>
-        <input type="radio" name="large" placeholder="Large">
-        <label for="sizeL">L</label> <br> <br>
+        <p class="size-options">Size (if applicable)</p>        
+        <div class="radio-group size-options">
+        <input type="radio" name="size1" id="sizeS1" value="S">
+        <label for="sizeS1">S</label>
+        <input type="radio" name="size1" id="sizeM1" value="M">
+        <label for="sizeM1">M</label>
+        <input type="radio" name="size1" id="sizeL1" value="L">
+        <label for="sizeL1">L</label>
+        </div>
+        <br> <br>
 
         <input type="text" name="item" placeholder="Item">
         <input type="text" name="quantity" placeholder="Quantity"> <br>
-        <p>Size (if applicable)</p> 
-        <input type="radio" name="small" placeholder="Small">
-        <label for="sizeS">S</label>
-        <input type="radio" name="medium" placeholder="Medium">
-        <label for="sizeM">M</label>
-        <input type="radio" name="large" placeholder="Large">
-        <label for="sizeL">L</label> <br> <br>
+        <p class="size-options">Size (if applicable)</p> 
+        <div class="radio-group size-options">
+        <input type="radio" name="size2" id="sizeS2" value="S">
+        <label for="sizeS2">S</label>
+        <input type="radio" name="size2" id="sizeM2" value="M">
+        <label for="sizeM2">M</label>
+        <input type="radio" name="size2" id="sizeL2" value="L">
+        <label for="sizeL2">L</label>
+        </div>
+        <br> <br>
 
         <input type="text" name="item" placeholder="Item">
         <input type="text" name="quantity" placeholder="Quantity"> <br>
-        <p>Size (if applicable)</p> 
-        <input type="radio" name="small" placeholder="Small">
-        <label for="sizeS">S</label>
-        <input type="radio" name="medium" placeholder="Medium">
-        <label for="sizeM">M</label>
-        <input type="radio" name="large" placeholder="Large">
-        <label for="sizeL">L</label> <br> <br>
+        <p class="size-options">Size (if applicable)</p>         
+        <div class="radio-group size-options">
+        <input type="radio" name="size3" id="sizeS3" value="S">
+        <label for="sizeS3">S</label>
+        <input type="radio" name="size3" id="sizeM3" value="M">
+        <label for="sizeM3">M</label>
+        <input type="radio" name="size3" id="sizeL3" value="L">
+        <label for="sizeL3">L</label> 
+        </div>
+        <br> <br>
+    </div>
 
-        <input type="text" name="item" placeholder="Item">
-        <input type="text" name="quantity" placeholder="Quantity"> <br>
-        <p>Size (if applicable)</p> 
-        <input type="radio" name="small" placeholder="Small">
-        <label for="sizeS">S</label>
-        <input type="radio" name="medium" placeholder="Medium">
-        <label for="sizeM">M</label>
-        <input type="radio" name="large" placeholder="Large">
-        <label for="sizeL">L</label> <br> <br>
-    </form>
-
-    <button>
-        <input type="button" name="pickup" placeholder="Pickup">
+  <div class="checkbox">
+    <p>Please choose:</p>
+        <input type="checkbox" name="pickup" placeholder="Pickup">
         <label for="pickupP">Pickup</label>
-        <input type="button" name="delivery" placeholder="Delivery">
+        <input type="checkbox" name="delivery" placeholder="Delivery">
         <label for="deliveryD">Delivery</label>       
-    </button>
+     </div>
 
+    <div class="order-form-input">
     <h3>Customer Info</h3>
     <form>
         <input type="text" name="firstName" placeholder="First Name">
@@ -93,7 +105,9 @@
         <input type="text" name="phoneNumber" placeholder="Phone Number"> <br>
         <input type="text" name="email" placeholder="Email">        
     </form>
+    </div>
 
+    <div class="order-form-input">
     <h3>Payment Info</h3>
     <form>
         <input type="text" name="credit" placeholder="Credit">
@@ -102,16 +116,18 @@
         <input type="text" name="expiration" placeholder="Expiration Date">
         <input type="text" name="cvv" placeholder="CVV">   <br> <br>     
     </form>
+    </div>
 
-    <button>
-        <input type="button" name="submit" placeholder="Submit">
-        <label for="submitS">Submit Order</label> <br> 
-    </button>
+    <div class="submit margin-bottom">
+        <a href="submit.html">Submit</a> <br> 
+    </div>
 
     <br> <br>
+    <div class="page-buttons">
     <a href="index.html">Home</a> <br>
     <a href="menu.html">Menu</a> <br>
     <a href="order.html">Ordering</a>
+    </div>
 
 </body>
 </html>
