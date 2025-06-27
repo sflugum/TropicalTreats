@@ -1,63 +1,73 @@
 /* Full Site */
+
+/* font and background color site-wide */
 body {
     font-family:Arial, Helvetica, sans-serif;
     background-color: rgb(235, 243, 158);
 }
 
+/* table options site-wide */
 table {
     table-layout: fixed;
     width:100%;
     border-collapse: collapse;
 }
 
+/* space under table headers site-wide */
 th {
     padding-bottom: 15px;
 }
 
+/* navigation buttons site-wide */
 .page-buttons {
+   /* starts flex container for elements to move on horizontal or vertical axis */
     display: flex;
+    /* spreads flex items with same spac between */
     justify-content: space-between;
+    /* stays in place when screen in scrolled */
     position: fixed;
+    /* aligns w/bottom edge of container */
     bottom:0;
+    /* aligns w/left edge of container */
     left: 0;
+    /* aligns w/right edge of container */
     right: 0;
+    /* color behind buttons */
     background-color: #df102c;
+    /* space surrouding content and border, em is relative Xem = X times the size of font it contains */
     padding: 0.5em;
 }
 
+/* navigation buttons, anchors only, site-wide */
 .page-buttons a {
+    /* flex buttons won't grow or shrink */
     flex: 0 0 auto;
+    /* text w/in anchors centered */
     text-align: center;
+    /* no underline with text/link/buttons */
     text-decoration: none;
-    color: #ffffff; 
+    /* text color */
+    color: #ffffff;
+     /*bold text  */
     font-weight: bold;
 }
 
+/* positioning 1st button to left */
 .page-buttons a:nth-child(1) {
     text-align: left;
 }
 
+/* positioning 2nd button to center */ 
 .page-buttons a:nth-child(2) {
     text-align: center;
 }
 
+/* positioning 3rd button to right */ 
 .page-buttons a:nth-child(3) {
     text-align: right;
 }
 
-#emphasis {
-    text-emphasis-color: yellow;
-    text-emphasis-style: "~";
-}
-
-#skip {
-    text-decoration-skip-ink: auto;
-}
-
-#dotted-underline {
-    border-bottom: 4px dotted purple;
-}
-
+/* page title format, font, sitewide (if used across pages) */
 .page-title {
     text-align: center;
     font-size: 4rem;
@@ -65,133 +75,212 @@ th {
     text-shadow: 5px 5px 5px yellow;
 }
 
+/* space between bottom of page items, elements and bottom of screen */
 .margin-bottom {
     margin-bottom:50px;
 }
 
+/* add yellow "~" above text */
+#emphasis {
+    text-emphasis-color: yellow;
+    text-emphasis-style: "~";
+}
+
+/* any unerline will skip over any portion of character that crosses underline */
+#skip {
+    text-decoration-skip-ink: auto;
+}
+
+/* dotted ubderline */
+#dotted-underline {
+    border-bottom: 4px dotted purple;
+}
+
 /* Index Page */
 
+/* top of page banner w/img and text (this class for text) */
 .index-banner {
+    /* used so img position is correct */
     position: relative;
+    /* banner height based on viewport height */
     height: 20vh;
+    /* cuts excess banner  */
     overflow: hidden;
+    /* font size */
     font-size: 2rem;
 }
 
+/* top of page banner w/img and text (this class for img) */
 .index-banner img {
+    /* keeps img position fixed */
     position: absolute;
+    /* aligns img to top of container (.index-banner) */
     top: 0;
+    /* aligns img to left of container */
     left: 0;
+    /* makes img full height of container */
     height: 100%;
+    /* makes img full width of container  */
     width: 100%;
+    /* fits img to cover full area of container w/out stretching */
     object-fit: cover;
+    /* to position img below banner text */
     z-index: 1;
 }
 
+/* for banner text */
 .index-title {
+    /* positions banner text based on its container */
     position: relative;
+    /* positions above banner img */
     z-index: 2;
-    text-align: center;   
+    /* centers text */
+    text-align: center;
+    /* text color  */
     color:white;
+    /* text shadow effect noting px amount in 3 directions plus color */
     text-shadow: 10px 10px 3px rgb(250, 1, 51);
+    /* places outlines around text noting thickness in px */
     -webkit-text-stroke: 2px rgb(10, 182, 159);
+    /* removes all margins */
     margin: 0;
+    /* space between banner text and page border based on viewport size*/
     padding-top: 4vh;
 }
 
+/* "welcome..." text */
 .index-welcome {
+    /* centers text in page */
     text-align: center;
+    /* text color */
     color: chartreuse;
+    /* text shadow w/3 directions + color */
     text-shadow: 2px 2px 5px crimson;
+    /* text font size */
     font-size:3.1rem;
 }
 
+/* tagline text */
 .index-tagline {
+    /* centers text */
     text-align: center;
+    /* text color */
     color: springgreen;
+    /* text size */
     font-size: 2.3rem;
+    /* text outline w/thickness and color */
     -webkit-text-stroke: 0.5px  rgb(233, 5, 62);
 }
 
 /* Menu Page */
 
-#menu-img-left {
-    float: left;
-    height:auto;
-    max-width: 40%;
-    padding:10px 10px 10px 10px;
-}
-
-#menu-img-right {
-    float: right;
-    height:auto;
-    max-width: 185px;
-    padding:10px 10px 10px 10px;
-}
-
+/* margin top/bottom size of container */
 .margin-spacing {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
+/* cuts excess of items w/out stretching, used per menu item */
 .container {
     overflow: hidden;
 }
 
+/* cuts excess of items w/out stretching, used per menu item table */
 .table-wrapper {
     overflow: hidden;
 }
 
-#price-align td:nth-child(2) {
-    text-align: center;
-}
-
+/* menu item category text */
 .menu-cats {
+    /* text size */
     font-size: 40px;
+    /* text color */
     color:rgb(10, 182, 159);
+    /* text shadow w/3 directions + color */
     text-shadow: 5px 5px 5px rgb(233, 5, 62);
 }
 
+/* table header text size, color, shadow */
 .menu-th {
     font-size: 27px;
     color:rgb(130, 5, 233);
     text-shadow: 5px 5px 5px rgb(233, 5, 62);
 }
 
+/* table data size and color */
 .menu-td {
     font-size:16px;
     color:rgb(4, 5, 68);
 }
 
-/* Order Page */
-
-#margin-bottom {
-    display:block;
-    margin-bottom: 50px;
+/* img position */
+#menu-img-left {
+    /* positions img to left of container */
+    float: left;
+    /* height will adjust based on width */
+    height:auto;
+    /* width is no more than 40% of container size */
+    max-width: 40%;
+    /* space between img and edge of container or other content */
+    /* includes all directions */
+    padding:10px 10px 10px 10px;
 }
 
+/* img position */
+#menu-img-right {
+    /* positions img to right of container */
+    float: right;
+    /* height will adjust based on width */
+    height:auto;
+    /* width is no more than 185px */
+    max-width: 185px;
+    /* space between img and edge of container or other content */
+    /* includes all directions */
+    padding:10px 10px 10px 10px;
+}
+
+/* centers table data for 2nd table */
+#price-align td:nth-child(2) {
+    text-align: center;
+}
+
+/* Order Page */
+
+/* text for list container */
 .order-options {
+    /* centers text */
     text-align:center;
+    /* text size */
     font-size: 30px;
+    /* text color */
     color:rgb(10, 182, 159);
+    /* text shadow w/3 directions + color */
     text-shadow: 2px 2px 2px rgb(233, 5, 62);
     
 }
 
+/* list container */
 .order-options ul{
+    /* text size */
     font-size:20px;
+    /* text color */
     color:rgb(4, 5, 68);  
-    list-style-position: inside;
-    list-style: none;  
+    /* removes bullet points */    
+    list-style: none; 
+    /* space between all 4 sides of list  */
     padding: 0;
+    /* removes margins all directions and centers */
     margin: 0 auto;
+    /* centers tet inside container */
     text-align: center;
 }
 
-.order-options ul li {
+/* margin below each list item */
+.order-options li {
     margin-bottom: 10px;
 }
 
+/* 2nd header color size, position */
 .order-form-h2 {
     color: chartreuse;
     text-shadow: 2px 2px 5px crimson;
@@ -199,92 +288,129 @@ th {
     text-align: center;
 }
 
+/* creates line/object to separate top and bottom of page */
 .divider {
+    /* height of line/object */
     height: 1px;
+    /* color of object */
     background-color:#df102c;
+    /* space around all sides of object */
     margin: 30px auto;
+    /* width of object is 80% of page width */
     width:80%;
 }
 
-.order-input {
-    text-align: center;
-    
-}
-
-.order-input h3 {
-    text-align:center;
-    font-size: 20px;
-    color:rgb(10, 182, 159);
-    text-shadow: 2px 2px 2px rgb(233, 5, 62);
-}
-
+/* form input box alignment */
 .order-form-input {
+    /* text box to left of page */
     text-align:left;
+    /* prevents text box ability to be resized by user */
     resize: none;
 }
 
+/* text size, color, shadow for form section headers */
 .order-form-input h3 {    
     font-size: 30px;
     color:rgb(10, 182, 159);
     text-shadow: 2px 2px 2px rgb(233, 5, 62);
 }
+
+/* formats input boxes */
 .order-form-input input {
+    /* input boxes 30% of container width */
     width: 30%;
+    /* space around input boxes 10px top/bottom 15px right/left */
     padding: 10px 15px;
+    /* box size includes entire box, not just content */
     box-sizing: border-box;
+    /* box border thickness, style, color */
     border: 2px solid rgb(233, 5, 62);
+    /* roundness of border corners */
     border-radius: 2px;
 
 }
 
+/* changes border color when input box is selected */
 .order-form-input input:focus {
     border: 3px solid chartreuse;
 
 }
 
+/* positions "size" radio buttons */
 .radio-group {
+    /* positions radio buttons on same line as their labels  */
     display: inline-flex;
+    /* centers buttons */
     align-items: center;
+    /* margin to right of buttons (between button label)*/
     margin-right: 10px;
 }
 
+/* text size, color, style/weight for "size" label text */
 .size-options {
     font-size:16px;
     color:rgb(4, 5, 68);
     font-weight:bold;
 }
 
-.submit {
+
+/* submit button */
+.check-and-submit {
+    /* background color of button container */
     background-color: yellow;
+    /* border thickness, style, color of button container*/
     border: 10px solid rgb(10, 182, 159);
+    /* button text color */
     color: rgb(233, 5, 62);
+    /* space between top/bottom and left/right of text and button container */
     padding: 5px 5px;
+    /* allows text and button on same line w/different sizing */
     display:inline-block;
+    /* text style */
     font-weight:bold;    
 }
 
-.submit input {
+/* changes cursor when hovering the Pickup and Delivery checkboxes- input element only */
+.check-and-submit input {
     cursor: pointer;
 }
 
-.submit p {
-    margin: 0 0 0 0;
+/* removes margins from p element in submit button */
+.check-and-submit p {
+    margin: 0;
 }
 
-.submit a {
+/* text color and removes underline for submit button-anchor element only */
+.check-and-submit a {
     color: rgb(233, 5, 62);
     text-decoration: none;
 }
 
+/* margin below element */
+#margin-bottom {
+    /* element will begin new line */
+    display:block;
+    /* margin below element */
+    margin-bottom: 50px;
+}
+
 /* Submit Page */
 
+/* thank you text */
 .thank-you {
+    /* centers text */
     text-align:center;
+    /* creates decor above text, style and color */
     text-emphasis: filled double-circle rgb(233, 5, 62);
+    /* padding top/bottom of text, no left/right */
     padding:200px 0;
+    /* text color */
     color:yellow;
+    /* shadow color and 3 directions */
     text-shadow: 5px 5px 5px rgb(10, 182, 159);
+    /* font size */
     font-size: 25px;
+    /* text border w/thickness and color */
     -webkit-text-stroke: 1px  chartreuse;
 }
 
